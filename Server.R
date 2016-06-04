@@ -32,10 +32,10 @@ mycolors2 <- colorRampPalette(c("blue", "white", "lightgreen", "lightyellow", "o
 #setwd("C:/Users/IBM_ADMIN/Desktop/Projects/RSTUDY/cec/ceccorpinfo2")
 
 
-corpinfo=read.csv("./data/corp_info.csv",header=T,sep=",",encoding="UFT-8",stringsAsFactors = F)
+corpinfo=read.csv("./corp_info.csv",header=T,sep=",",encoding="UFT-8",stringsAsFactors = F)
 #corpcor=read.csv(paste("try1.csv",sep=""),header=T,sep=",",encoding="UFT-8",stringsAsFactors = F)
 
-emonos76=read.csv("./data/news_all1.csv",header=T,sep=",",encoding="UFT-8",stringsAsFactors = F)
+emonos76=read.csv("./news_all1.csv",header=T,sep=",",encoding="UFT-8",stringsAsFactors = F)
 news_time=strptime(as.character(emonos76$REPORT_TIME),"%Y-%m-%d")
 score=emonos76$score
 side=emonos76$side
@@ -122,7 +122,7 @@ server<-function(input, output) {
   )
   
   
-  data=read.csv(paste("./data/try1.csv",sep=""),header=T,sep=",",encoding="UFT-8",stringsAsFactors = F)
+  data=read.csv(paste("./try1.csv",sep=""),header=T,sep=",",encoding="UFT-8",stringsAsFactors = F)
   
   
   output$visNetworkOutput2 <- renderVisNetwork({
